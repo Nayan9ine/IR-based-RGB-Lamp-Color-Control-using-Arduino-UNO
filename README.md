@@ -117,7 +117,13 @@ Set it to 167 Ohm (gives 22 mA) but still received no output.
 Realized 20mA isnt enough and need about 50mA atleast so:
 <br>
 ->Used BJT
-Utilized BC547 B with absoulte maximum Ic=100mA and electrical characteristics were: Vce= 90-200mV (sat); Vbe= 700-900 mV (sat),
+Utilized BC547 B with absoulte maximum Ic=100mA and electrical characteristics were: Vce= 90-200mV (sat); Vbe= 700-900 mV (sat),660 mV (ON); Gain (Ic/Ib) = 200-450 for B class (https://cdn.sparkfun.com/assets/d/5/e/5/d/BC547.pdf)
+
+##### Calculation:
+With Ic assumed=50mA, gain=200, Vbe=0.7V, Vce=0.2mV
+I got Rc=7.2 Ohm and Rb=18k Ohm ( four 67K in parallel and 1k in series = 17970 Ohm)
+<img width="4588" height="4070" alt="bjt 17k base ohm" src="https://github.com/user-attachments/assets/e667d629-3a53-4e46-9c12-47d42b12bb52" />
+
 ### Getting Remote Codes
 
 
