@@ -7,6 +7,8 @@ Did continuity test on remote's PCB and found no error. Since 2 columns were non
 ## Project Details
 
 ### IR Receiver
+<img width="5760" height="4312" alt="soldering setup" src="https://github.com/user-attachments/assets/0a47111b-9699-4a80-b572-90bc97f1c617" />
+
 Some buttons on remote still worked so I needed to find their codes to guess the non-working ones. For that I needed a receiver.
 Had an old TV setup box and remote with IR reciever and transmitter respectively. De-soldered them and used reciever to find the codes.
 <img width="3376" height="4815" alt="ir receiver" src="https://github.com/user-attachments/assets/cf44afc7-de83-464c-8c4e-0272cd426c1e" />
@@ -91,6 +93,9 @@ Protocol=NEC Address=0x0, Command=0x15, Repeat, Gap=39600us, Duration=11750us
 Repeat received. Here you can repeat the same action as before.
 
 ### IR Transmitter
+Using the IR transmitter example from the library, I created a program fed with a list of working commands that were signalled continously in a loop with a gap of about 3 seconds. Repeat signal set to 3 as its the standard.  
+<img width="1920" height="1080" alt="transmitter code" src="https://github.com/user-attachments/assets/74675a8d-6ad4-4ec7-ad89-6962d4a881bb" />
+
 <img width="4312" height="5760" alt="remote pcb" src="https://github.com/user-attachments/assets/65066b29-139d-41e2-a52f-20e78b59c2f6" />
 <img width="4312" height="5760" alt="tx desolder" src="https://github.com/user-attachments/assets/363568e6-266c-44f5-9745-ca0cae7034e2" />
 <img width="4312" height="5760" alt="desoldered TX" src="https://github.com/user-attachments/assets/889fd963-ed9c-4ade-98fd-1a99674fc573" />
@@ -121,9 +126,40 @@ Utilized BC547 B with absoulte maximum Ic=100mA and electrical characteristics w
 
 ##### Calculation:
 With Ic assumed=50mA, gain=200, Vbe=0.7V, Vce=0.2mV
-I got Rc=7.2 Ohm and Rb=18k Ohm ( four 67K in parallel and 1k in series = 17970 Ohm)
+I got Rc=72 Ohm and Rb=18k Ohm ( four 67K in parallel and 1k in series = 17970 Ohm)
 <img width="4588" height="4070" alt="bjt 17k base ohm" src="https://github.com/user-attachments/assets/e667d629-3a53-4e46-9c12-47d42b12bb52" />
+<br>
+Result: Worked but resulting IR signals were very weak. So they weren't effective for slightly longer distance 
+(https://drive.google.com/file/d/1yKxyMbIhAzy9gKmQ9HroFnUobWQBn7yZ/view?usp=sharing)
 
-### Getting Remote Codes
+--> Due to low tolerance to temperature the bjt can have highly fluctuation gain so I assumed the gain of this particular BJT was very low so I redid the calculations taking gain =100.
+Got Rb=8.6K Ohm ((5x1k)+(470x6)), reduced Rc to 66 ohm.
+Result: Still IR strength was very weak but the range was improved.
 
+insert table here IR STRENGTH CHART
+Rb= 7.2kOhm distance of working=53inch  Doesnt switch after white
+6.79kOhm                     93 inch     nothing after white
+6.3k                      white works at 60 inch
 
+Rb=4k; Ib=1.075mA; Ic=107.5mA Brightness increased but still not strong enough
+Used in Saturation mode so that channel will be opened fully and more voltage be pushed through collector.
+##### Calculation
+Forced Gain=20; Ic=70mA; Ib=3.5mA; Rb=1.228 kOhm; Vir=1.5v; Rc=47 Ohm.
+Result: Range increased to 80 inches with it still working after white lighting.
+
+### Getting Unknown Remote Codes
+14  buttons were unknown with 2 buttons for ON and OFF , 5 buttons of 4th column for brightness and last 2 buttons of 7th row as Set and Manual. 
+<img width="1278" height="2315" alt="unknown buttons" src="https://github.com/user-attachments/assets/12e03dd5-da35-413d-a570-1fa715b8d92d" />
+
+From the known commands I noticed a pattern that showed increasing hex value along the row. 
+So if row 1 and row 2 had 18 and 19 respectively I tried 0x20 then 0x21, using this I found only rows 3,5,6 and 7th worked. In which I had to to independently test The brightness, manual and set buttons by writing separate programs.
+
+To find other button values I had to dive deeper into understanding how hex value is represented. 
+I realized 0x10 does not follow after 0x9 as 0x10 is (16^0*0)+(16^1*1)=17. 0xA comes after it.
+This way I found value of 4th row as well. For ON and OFF button I had to do some hit and trial by using long arrays of random command values and ultimately found them to be 0x1E and 0x1F.
+
+### Integrating Remote
+For remote I used 4x4 keypad membrane (16 buttons), with help of keypad library.
+Instead of writing multiple if else statments to define each button press,comparing it to my array of commands and then transmitting it, I made use of known concept that output of keypad is stored in integer format if the input is also an integer.So directly mapped the keypad buttons to desired command values and converted the output to HEX value during transmission. 
+
+<img width="4312" height="5760" alt="final setup (1)" src="https://github.com/user-attachments/assets/8a9ff81a-6291-4f3a-99b5-bc3e8c7a583c" />
