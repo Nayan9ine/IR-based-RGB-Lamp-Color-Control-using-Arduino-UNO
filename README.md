@@ -142,7 +142,7 @@ Rb= 7.2kOhm distance of working=53inch  Doesnt switch after white
 6.3k                      white works at 60 inch
 
 Rb=4k; Ib=1.075mA; Ic=107.5mA Brightness increased but still not strong enough
-Used in Saturation mode so that channel will be opened fully and more voltage be pushed through collector.
+Used in Saturation mode so that channel will be opened fully and max current be pushed through collector.
 ##### Calculation
 Forced Gain=20; Ic=70mA; Ib=3.5mA; Rb=1.228 kOhm; Vir=1.5v; Rc=47 Ohm.
 Result: Range increased to 80 inches with it still working after white lighting.
@@ -159,7 +159,7 @@ I realized 0x10 does not follow after 0x9 as 0x10 is (16^0*0)+(16^1*1)=17. 0xA c
 This way I found value of 4th row as well. For ON and OFF button I had to do some hit and trial by using long arrays of random command values and ultimately found them to be 0x1E and 0x1F.
 
 ### Integrating Remote
-For remote I used 4x4 keypad membrane (16 buttons), with help of keypad library.
-Instead of writing multiple if else statments to define each button press,comparing it to my array of commands and then transmitting it, I made use of known concept that output of keypad is stored in integer format if the input is also an integer.So directly mapped the keypad buttons to desired command values and converted the output to HEX value during transmission. 
+For remote I used 4x4 keypad membrane (16 buttons), with help of keypad library by Mark Stanley.It makes use of array written in char data type which stores the value of buttons.
+Instead of writing multiple if else statments to define each button press,comparing it to my array of commands and then transmitting it, I made use of known concept that is values stored in charare put under quotations then output is stored in it's corresponding ASCII value and if stored in integer or hex format then output stored in corresponding BYTE form ((0 to 255 integers).For eg storing 0X1F will be stored as 31 & 20 as 20 but 'A' will be stored as 65. So directly mapped the keypad button array to desired command values and converted the output to HEX value during transmission. 
 
 <img width="4312" height="5760" alt="final setup (1)" src="https://github.com/user-attachments/assets/8a9ff81a-6291-4f3a-99b5-bc3e8c7a583c" />
