@@ -136,14 +136,8 @@ Was complex as it needs around 20-100mA and a voltage drop of 1.2 to 1.8v. Each 
 <img width="4895" height="2638" alt="tx with resistor" src="https://github.com/user-attachments/assets/1d995e3a-f53a-4952-b65e-7ffad1779b9b" />
 
 #### Calculation
-By KVL: 5-1.4-20x10^-3 x Rmin =0
-
-$\( 5 - 1.4 - 20x10^{-3} \) \( x \in \mathbb{R} \)$
-
-$
-\frac{a}{b}
-$
-
+By KVL: 
+$5 - 1.4 - (20x10^{-3}\$ x Rmin) = 0
 <br>
 Rmin=180 ohm
 <br>
