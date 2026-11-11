@@ -152,9 +152,8 @@ Using the IR transmitter example from the library, I created a program fed with 
  </tr>
 </table>
 Was complex as it needs around 20-100mA and a voltage drop of 1.2 to 1.8v. Each digital pin can transmit upto 20mA with absolute max of 40mA. 
-
+<br>
 ->Tried without BJT by applying 220 Ohm resistor as in fig to see if it works at 20mA
-
 
 #### Calculation
 By KVL: 
@@ -162,35 +161,56 @@ $5 - 1.4 - (20x10^{-3}\$ x Rmin) = 0
 <br>
 Rmin=180 ohm
 <br><br>
-By using 220 ohm I should theoretically receive 16.3mA.Since the signal is sent at 38KHz meaning digital pin turns ON and OFF 38,000 times per second.Standard multimeter cannot be used to measure either voltage or current in either DC or AC mode. Only way to check is using phone camera that is capable of detecting violet flashes which prove that IR signals are being sent. I didnt see anything, that meant 16.3mA wasn't enough.
-
+By using 220 ohm I should theoretically receive 16.3mA. Since the signal is sent at 38KHz meaning digital pin turns ON and OFF 38,000 times per second, standard multimeter cannot be used to measure either voltage or current in either DC or AC mode. Only way to check is using phone camera that is capable of detecting violet flashes which prove that IR signals are being sent. I didnt see anything, that meant 16.3mA wasn't enough.
 
 ->Lowered resistor by placing 1k Ohm pot.
-
 Set it to 167 Ohm (gives 22 mA) but still received no output.
-
 
 Realized 20mA isnt enough and need about 50mA atleast so:
 <br>
 ->Used BJT
-Utilized BC547 B with absoulte maximum Ic=100mA and electrical characteristics were: Vce= 90-200mV (sat); Vbe= 700-900 mV (sat),660 mV (ON); Gain (Ic/Ib) = 200-450 for B class (https://cdn.sparkfun.com/assets/d/5/e/5/d/BC547.pdf)
+<br>
+Utilized BC547 B with absoulte maximum Ic=100mA and electrical characteristics were: Vce= 90-200mV (sat); Vbe= 700-900 mV (sat),660 mV (ON); Gain (Ic/Ib) = 200-450 for B class. (https://cdn.sparkfun.com/assets/d/5/e/5/d/BC547.pdf)
 
 ##### Calculation:
 With Ic assumed=50mA, gain=200, Vbe=0.7V, Vce=0.2mV
 I got Rc=72 Ohm and Rb=18k Ohm ( four 67K in parallel and 1k in series = 17970 Ohm)
 <img width="4588" height="4070" alt="bjt 17k base ohm" src="https://github.com/user-attachments/assets/e667d629-3a53-4e46-9c12-47d42b12bb52" />
 <br>
-Result: Worked but resulting IR signals were very weak. So they weren't effective for slightly longer distance 
+Result: Worked but resulting IR signals were very weak.Didn't work after a short distance 
 (https://drive.google.com/file/d/1yKxyMbIhAzy9gKmQ9HroFnUobWQBn7yZ/view?usp=sharing)
 
---> Due to low tolerance to temperature the bjt can have highly fluctuation gain so I assumed the gain of this particular BJT was very low so I redid the calculations taking gain =100.
+Due to low tolerance to temperature the bjt can have highly fluctuating gain so I assumed the gain of this particular BJT was very low so I redid the calculations taking gain =100.
 Got Rb=8.6K Ohm ((5x1k)+(470x6)), reduced Rc to 66 ohm.
+<br>
 Result: Still IR strength was very weak but the range was improved.
 
 insert table here IR STRENGTH CHART
 Rb= 7.2kOhm distance of working=53inch  Doesnt switch after white
 6.79kOhm                     93 inch     nothing after white
 6.3k                      white works at 60 inch
+<table>
+  <tr>
+    <td><b>Rb Value (in KOhm)</b></td>
+    <td><b>Range (inch)</b></td>
+     <td><b>White Color Interference</b></td>
+  </tr>
+  <tr>
+    <td>7.2</td>
+    <td>53</td>
+     <td>Yes</td>
+  </tr>
+  <tr>
+    <td>6.7</td>
+    <td>67</td>
+     <td>Yes</td>
+  </tr>
+  <tr>
+    <td>6.3</td>
+    <td>78</td>
+     <td>IR resumed work when lamp was at 60 inch</td>
+  </tr>
+</table>
 
 Rb=4k; Ib=1.075mA; Ic=107.5mA Brightness increased but still not strong enough
 Used in Saturation mode so that channel will be opened fully and max current be pushed through collector.
