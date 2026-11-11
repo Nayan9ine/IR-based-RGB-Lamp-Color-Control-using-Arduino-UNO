@@ -130,25 +130,45 @@ Using the IR transmitter example from the library, I created a program fed with 
 </table>
 
 #### Setting Up TX Circuit
+<table>
+  <tr>
+    <td>
+      <img width="2579" height="1148" alt="IR via Camera" src="https://github.com/user-attachments/assets/b6da534d-f886-47c3-903a-663ebee080c6" />
+      <div align="center"><sub><i>Fig:8 IR Flash from camera</i></sub></div>
+    </td>
+    <td>
+      <img width="4895" height="2638" alt="tx with resistor" src="https://github.com/user-attachments/assets/1d995e3a-f53a-4952-b65e-7ffad1779b9b" />
+      <div align="center"><sub><i>Fig:9 220 Ohm</i></sub></div>
+    </td>
+  </tr>
+  <tr>
+    <td><img width="4420" height="2519" alt="tx with pot" src="https://github.com/user-attachments/assets/25d1faa2-f607-405d-89f0-bd991f148cee" />
+      <div align="center"><sub><i>Fig:10 Potentiometer</i></sub></div>
+    </td>
+    <td>
+     <img width="3293" height="3867" alt="Ir tx pot ohm" src="https://github.com/user-attachments/assets/610957f6-c60c-4050-b577-d106adcf437b" />
+      <div align="center"><sub><i>Fig:11 167 Ohm</i></sub></div>
+    </td>
+ </tr>
+</table>
 Was complex as it needs around 20-100mA and a voltage drop of 1.2 to 1.8v. Each digital pin can transmit upto 20mA with absolute max of 40mA. 
 
 ->Tried without BJT by applying 220 Ohm resistor as in fig to see if it works at 20mA
-<img width="4895" height="2638" alt="tx with resistor" src="https://github.com/user-attachments/assets/1d995e3a-f53a-4952-b65e-7ffad1779b9b" />
+
 
 #### Calculation
 By KVL: 
 $5 - 1.4 - (20x10^{-3}\$ x Rmin) = 0
 <br>
 Rmin=180 ohm
-<br>
-By using 220 ohm I should theoretically receive 16.3mA
-Since the signal is sent at 38KHz meaning digital pin turns ON and OFF 38,000 times per second,Standard multimeter cannot be used to measure either voltage or current in either DC or AC mode. Only way to check was using phone camera that is capable of detecting violet flashes which are IR signals being sent. I didnt see anything, that meant 16.3mA wasn't enough.
-<img width="2579" height="1148" alt="IR via Camera" src="https://github.com/user-attachments/assets/b6da534d-f886-47c3-903a-663ebee080c6" />
+<br><br>
+By using 220 ohm I should theoretically receive 16.3mA.Since the signal is sent at 38KHz meaning digital pin turns ON and OFF 38,000 times per second.Standard multimeter cannot be used to measure either voltage or current in either DC or AC mode. Only way to check is using phone camera that is capable of detecting violet flashes which prove that IR signals are being sent. I didnt see anything, that meant 16.3mA wasn't enough.
+
 
 ->Lowered resistor by placing 1k Ohm pot.
-<img width="4420" height="2519" alt="tx with pot" src="https://github.com/user-attachments/assets/25d1faa2-f607-405d-89f0-bd991f148cee" />
+
 Set it to 167 Ohm (gives 22 mA) but still received no output.
-<img width="3293" height="3867" alt="Ir tx pot ohm" src="https://github.com/user-attachments/assets/610957f6-c60c-4050-b577-d106adcf437b" />
+
 
 Realized 20mA isnt enough and need about 50mA atleast so:
 <br>
