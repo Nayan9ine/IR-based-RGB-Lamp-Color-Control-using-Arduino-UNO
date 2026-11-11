@@ -22,7 +22,7 @@ Did continuity test on remote's PCB and found no error. Since 2 columns were non
   </tr>
 </table>
 
-Some buttons on remote still worked so I needed to find their codes to guess the non-working ones. For that I needed a receiver.
+Only the 1st two columns on remote worked so I needed to find their codes to guess the non-working ones. For that I needed a receiver.
 Had an old TV setup box and remote with IR reciever and transmitter respectively. De-soldered them and used reciever to find the codes.
 
 Used Arduino-IRremote Library's (https://github.com/Arduino-IRremote/Arduino-IRremote) simple receiver example to detect the signals. Baud rate set at 152000 in order to catch high frequency signal. Observed that NEC protocol was followed, 0x00 address was universal for all the buttons and commands were unique. 
@@ -105,12 +105,30 @@ Send with: IrSender.sendNEC(0x0, 0x15, <numberOfRepeats>);
 <sub>Repeat received. Here you can repeat the same action as before.
 
 ### IR Transmitter
-Using the IR transmitter example from the library, I created a program fed with a list of working commands that were signalled continously in a loop with a gap of about 3 seconds. Repeat signal set to 3 as its the standard.  
-<img width="1920" height="1080" alt="transmitter code" src="https://github.com/user-attachments/assets/74675a8d-6ad4-4ec7-ad89-6962d4a881bb" />
+Using the IR transmitter example from the library, I created a program fed with a list of working commands that were signalled continously in a loop with a gap of about 3 seconds. Repeat signal set to 3 as its the standard.
+<table>
+  <tr>
+    <td>
+      <img width="1920" height="1080" alt="transmitter code" src="https://github.com/user-attachments/assets/74675a8d-6ad4-4ec7-ad89-6962d4a881bb" />
+      <div align="center"><sub><i>Fig 4: IR Tx Program </i></sub></div>
+    </td>
+     <td>
+      <img width="2111" height="4838" alt="remote pcb" src="https://github.com/user-attachments/assets/3df83fdf-dac9-48b8-b3f3-f5b4ad92f30c" />
+      <div align="center"><sub><i>Fig 5: Spare TV Remote</i></sub></div>
+    </td>
+  </tr>
+  <tr>
+     <td>
+      <img width="2211" height="5133" alt="tx desolder" src="https://github.com/user-attachments/assets/6cac7685-0fed-4324-89c4-83375584e557" />
+      <div align="center"><sub><i>Fig 6: Transmitter on Remote</i></sub></div>
+    </td>
+     <td>
+      <img width="3681" height="3488" alt="desoldered TX" src="https://github.com/user-attachments/assets/592ad72a-13dc-41ad-a3cb-e86db0369ad3" />
+      <div align="center"><sub><i>Fig 7: De-soldered IR Tx</i></sub></div>
+    </td>
+  </tr>
+</table>
 
-<img width="4312" height="5760" alt="remote pcb" src="https://github.com/user-attachments/assets/65066b29-139d-41e2-a52f-20e78b59c2f6" />
-<img width="4312" height="5760" alt="tx desolder" src="https://github.com/user-attachments/assets/363568e6-266c-44f5-9745-ca0cae7034e2" />
-<img width="4312" height="5760" alt="desoldered TX" src="https://github.com/user-attachments/assets/889fd963-ed9c-4ade-98fd-1a99674fc573" />
 Setting up IR Transmitter circuit was complex as it needs around 20-50mA or more sometimes and have a voltage drop of 1.2 to 1.8v. Each digital pin can transmit upto 20mA only. 
 
 #### Hit n Trial
