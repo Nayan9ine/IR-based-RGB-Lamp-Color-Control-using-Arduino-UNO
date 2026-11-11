@@ -7,13 +7,25 @@ Did continuity test on remote's PCB and found no error. Since 2 columns were non
 ## Project Details
 
 ### IR Receiver
-<img width="5760" height="4312" alt="soldering setup" src="https://github.com/user-attachments/assets/0a47111b-9699-4a80-b572-90bc97f1c617" />
+<table>
+  <tr>
+    <td>
+      <img width="5760" height="4312" alt="soldering setup" src="https://github.com/user-attachments/assets/0a47111b-9699-4a80-b572-90bc97f1c617" />
+      <div align="center"><sub><i>Fig:1 Solder Setup</i></sub></div>
+    </td>
+    <td><img width="3376" height="4815" alt="ir receiver" src="https://github.com/user-attachments/assets/cf44afc7-de83-464c-8c4e-0272cd426c1e" />
+      <div align="center"><sub><i>Fig:2 IR Receiver</i></sub></div>
+    </td>
+    <td><img width="1920" height="1080" alt="IR received commands" src="https://github.com/user-attachments/assets/99df7a3f-b5aa-402e-92dd-8b1651007abc" />
+      <div align="center"><sub><i>Fig:3 IR Receiver Program</i></sub></div>
+    </td>
+  </tr>
+</table>
+
 
 Some buttons on remote still worked so I needed to find their codes to guess the non-working ones. For that I needed a receiver.
 Had an old TV setup box and remote with IR reciever and transmitter respectively. De-soldered them and used reciever to find the codes.
-<img width="3376" height="4815" alt="ir receiver" src="https://github.com/user-attachments/assets/cf44afc7-de83-464c-8c4e-0272cd426c1e" />
 
-<img width="1920" height="1080" alt="IR received commands" src="https://github.com/user-attachments/assets/99df7a3f-b5aa-402e-92dd-8b1651007abc" />
 Used Arduino-IRremote Library (https://github.com/Arduino-IRremote/Arduino-IRremote) . 0x00 Address  was universal for all the buttons and realized comnmands were used for controlling. Baud rate set at 152000 in order to catch high frequency signal.
 
 IDE OUTPUT OF 1ST TWO COLUMNS:
