@@ -108,35 +108,42 @@ Send with: IrSender.sendNEC(0x0, 0x15, <numberOfRepeats>);
 Using the IR transmitter example from the library, I created a program fed with a list of working commands that were signalled continously in a loop with a gap of about 3 seconds. Repeat signal set to 3 as its the standard.
 <table>
   <tr>
-    <td>
-      <img width="1920" height="1080" alt="transmitter code" src="https://github.com/user-attachments/assets/74675a8d-6ad4-4ec7-ad89-6962d4a881bb" />
-      <div align="center"><sub><i>Fig 4: IR Tx Program </i></sub></div>
-    </td>
      <td>
       <img width="2111" height="4838" alt="remote pcb" src="https://github.com/user-attachments/assets/3df83fdf-dac9-48b8-b3f3-f5b4ad92f30c" />
-      <div align="center"><sub><i>Fig 5: Spare TV Remote</i></sub></div>
+      <div align="center"><sub><i>Fig 4: Spare TV Remote</i></sub></div>
+    </td>
+     <td>
+      <img width="2211" height="5133" alt="tx desolder" src="https://github.com/user-attachments/assets/6cac7685-0fed-4324-89c4-83375584e557" />
+      <div align="center"><sub><i>Fig 5: Transmitter on Remote</i></sub></div>
     </td>
   </tr>
   <tr>
      <td>
-      <img width="2211" height="5133" alt="tx desolder" src="https://github.com/user-attachments/assets/6cac7685-0fed-4324-89c4-83375584e557" />
-      <div align="center"><sub><i>Fig 6: Transmitter on Remote</i></sub></div>
-    </td>
-     <td>
       <img width="3681" height="3488" alt="desoldered TX" src="https://github.com/user-attachments/assets/592ad72a-13dc-41ad-a3cb-e86db0369ad3" />
-      <div align="center"><sub><i>Fig 7: De-soldered IR Tx</i></sub></div>
+      <div align="center"><sub><i>Fig 6: De-soldered IR Tx</i></sub></div>
+    </td>
+    <td>
+      <img width="1920" height="1080" alt="transmitter code" src="https://github.com/user-attachments/assets/74675a8d-6ad4-4ec7-ad89-6962d4a881bb" />
+      <div align="center"><sub><i>Fig 7: IR Tx Program </i></sub></div>
     </td>
   </tr>
 </table>
 
-Setting up IR Transmitter circuit was complex as it needs around 20-50mA or more sometimes and have a voltage drop of 1.2 to 1.8v. Each digital pin can transmit upto 20mA only. 
+#### Setting Up TX Circuit
+Was complex as it needs around 20-100mA and a voltage drop of 1.2 to 1.8v. Each digital pin can transmit upto 20mA with absolute max of 40mA. 
 
-#### Hit n Trial
 ->Tried without BJT by applying 220 Ohm resistor as in fig to see if it works at 20mA
 <img width="4895" height="2638" alt="tx with resistor" src="https://github.com/user-attachments/assets/1d995e3a-f53a-4952-b65e-7ffad1779b9b" />
 
-##### Calculation
+#### Calculation
 By KVL: 5-1.4-20x10^-3 x Rmin =0
+
+$\( 5 - 1.4 - 20x10^{-3} \) \( x \in \mathbb{R} \)$
+
+$
+\frac{a}{b}
+$
+
 <br>
 Rmin=180 ohm
 <br>
