@@ -1,4 +1,5 @@
 # Controlling-RGB-Lamp-via-IR-using-Arduino-UNO
+<div align="right"><i>-by Nayan Ag</i></div>
 Had an old RGB lamp with included IR remote which was broken. So made a custom one using Arduino UNO. <br>
 
 ## About Remote
