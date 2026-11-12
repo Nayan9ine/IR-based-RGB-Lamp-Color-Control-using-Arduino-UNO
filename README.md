@@ -4,10 +4,9 @@ Had an old RGB lamp with included IR remote which was broken. So made a custom o
 ## About Remote
 <div align= "center"><img width="200" height="370" alt="Remote" src="https://github.com/user-attachments/assets/3c5ed012-334e-4a94-9eb9-72ebe3e05022" />
 
-  <br><sub><i>Fig1: Faulty Remote</i></sub>
+  <br><sub><i>Fig 1 : Faulty Remote</i></sub>
 </div>
-<br>
-Did continuity test on remote's PCB and found no error. Rightmost 2 columns were non-operational. Concluded that the COB (chip on board) was either broken or just not programmed for the 2 columns. In my other repository I have reverse engineered the schematic and drawn a crude PCB design on KiCad. (https://github.com/Nayan9ine/RGB-light-Controller-Remote-) 
+Did continuity test on remote's PCB and found no error. Rightmost 2 columns were non-operable. Concluded that the COB (chip on board) was either broken or just not programmed for the 2 columns. In my other repository I have reverse engineered the schematic and drawn a crude PCB design on KiCad. (https://github.com/Nayan9ine/RGB-light-Controller-Remote-) 
 
 ## Project Details
 
@@ -16,13 +15,13 @@ Did continuity test on remote's PCB and found no error. Rightmost 2 columns were
   <tr>
     <td>
       <img width="1000" height="749" alt="soldering setup" src="https://github.com/user-attachments/assets/8bcb7cdd-7ce0-49c0-b2d4-c5c2d43d8809" />
-      <div align="center"><sub><i>Fig:1 Solder Setup</i></sub></div>
+      <div align="center"><sub><i>Fig 2: Solder Setup</i></sub></div>
     </td>
     <td><img width="800" height="1141" alt="ir receiver" src="https://github.com/user-attachments/assets/8c59f3bb-86bb-4fc7-aefa-f98bed870ade" />
-      <div align="center"><sub><i>Fig:2 IR Receiver</i></sub></div>
+      <div align="center"><sub><i>Fig 3: IR Receiver</i></sub></div>
     </td>
     <td><img width="1000" height="563" alt="IR received commands" src="https://github.com/user-attachments/assets/f2b7aeab-36ba-475e-91ca-4003cf776db5" />
-    <div align="center"><sub><i>Fig:3 IR Receiver Program</i></sub></div>
+    <div align="center"><sub><i>Fig 4: IR Receiver Program</i></sub></div>
     </td>
   </tr>
 </table>
@@ -115,21 +114,21 @@ Using the IR transmitter example from the library, I created a program fed with 
   <tr>
      <td>
       <img width="500" height="1146" alt="remote pcb" src="https://github.com/user-attachments/assets/2bee48fc-49f4-4600-a5c5-d66d661ed09d" />
-      <div align="center"><sub><i>Fig 4: Spare TV Remote</i></sub></div>
+      <div align="center"><sub><i>Fig 5: Spare TV Remote</i></sub></div>
     </td>
      <td>
-      <img width="500" height="1161" alt="tx desolder" src="https://github.com/user-attachments/assets/339f1df4-bc81-44b1-8229-c48becf2d869" />
-      <div align="center"><sub><i>Fig 5: Transmitter on Remote</i></sub></div>
+      <img width="250" height="461" alt="tx desolder" src="https://github.com/user-attachments/assets/339f1df4-bc81-44b1-8229-c48becf2d869" />
+      <div align="center"><sub><i>Fig 6: Transmitter on Remote</i></sub></div>
     </td>
   </tr>
   <tr>
      <td>
       <img width="500" height="474" alt="desoldered TX" src="https://github.com/user-attachments/assets/a083f132-1fe0-473b-bb70-5f162c9a00da" />
-      <div align="center"><sub><i>Fig 6: De-soldered IR Tx</i></sub></div>
+      <div align="center"><sub><i>Fig 7: De-soldered IR Tx</i></sub></div>
     </td>
     <td>
       <img width="1000" height="563" alt="transmitter code" src="https://github.com/user-attachments/assets/e9234bd5-2cf6-4a53-94c8-6a1f52b88a94" />
-      <div align="center"><sub><i>Fig 7: IR Tx Program </i></sub></div>
+      <div align="center"><sub><i>Fig 8: IR Tx Program </i></sub></div>
     </td>
   </tr>
 </table>
@@ -139,20 +138,20 @@ Using the IR transmitter example from the library, I created a program fed with 
   <tr>
     <td>
       <img width="800" height="356" alt="IR via Camera" src="https://github.com/user-attachments/assets/4d7bb0ed-db9a-4b7a-917f-618efeac955c" />
-      <div align="center"><sub><i>Fig:8 IR Flash from camera</i></sub></div>
+      <div align="center"><sub><i>Fig 9: IR Flash from camera</i></sub></div>
     </td>
     <td>
      <img width="500" height="269" alt="tx with resistor" src="https://github.com/user-attachments/assets/080072e5-b09b-470e-840f-59278dd58e1e" />
-      <div align="center"><sub><i>Fig:9 220 Ohm</i></sub></div>
+      <div align="center"><sub><i>Fig 10: 220 Ohm</i></sub></div>
     </td>
   </tr>
   <tr>
     <td><img width="500" height="285" alt="tx with pot" src="https://github.com/user-attachments/assets/2a181226-b465-40de-a9c3-5e28be4853ca" />
-      <div align="center"><sub><i>Fig:10 Potentiometer</i></sub></div>
+      <div align="center"><sub><i>Fig 11: Potentiometer</i></sub></div>
     </td>
     <td>
      <img width="500" height="587" alt="Ir tx pot ohm" src="https://github.com/user-attachments/assets/6c6aa93e-3163-47aa-8b75-82b253760ada" />
-      <div align="center"><sub><i>Fig:11 167 Ohm</i></sub></div>
+      <div align="center"><sub><i>Fig 12: 167 Ohm</i></sub></div>
     </td>
  </tr>
 </table>
@@ -217,15 +216,15 @@ Result: Still IR strength was very weak but the range was improved.
   <tr>
     <td>
       <img width="500" height="444" alt="bjt 17k base ohm" src="https://github.com/user-attachments/assets/51438a6b-8ec4-436f-9c9c-4e19e047d9b7" />
-      <div align="center"><sub><i>Fig:12 BJT with 17.17kOhm</i></sub></div>
+      <div align="center"><sub><i>Fig 13: BJT with 17.17kOhm</i></sub></div>
     </td>
     <td>
       <img width="500" height="378" alt="strong ir signal (1 2kohm)" src="https://github.com/user-attachments/assets/4f25b13f-4556-445c-b469-79df3199e8d1" />
-      <div align="center"><sub><i>Fig:13 Strong IR signal Rb as (1 2kohm)</i></sub></div>
+      <div align="center"><sub><i>Fig 14: Strong IR signal Rb as (1 2kohm)</i></sub></div>
     </td>
     <td>
      <img width="600" height="383" alt="Rb as 1 47 kohm" src="https://github.com/user-attachments/assets/eeb5a225-fdf7-4825-92d3-7ce4d76c28f9" />
-      <div align="center"><sub><i>Fig:14 IR Receiver Rb as 1.47 kohm/i></sub></div>
+      <div align="center"><sub><i>Fig 15: IR Receiver Rb as 1.47 kohm/i></sub></div>
     </td>
   </tr>
 </table>
@@ -238,7 +237,11 @@ Forced Gain=20; Ic=70mA; Ib=3.5mA; Rb=1.228 kOhm; Vir=1.5v; Rc=47 Ohm.
 Result: Range increased to 80 inches with it still working after white lighting.
 
 ### Getting Unknown Remote Codes
+<div align="center">
 <img width="200" height="306" alt="unknown buttons" src="https://github.com/user-attachments/assets/3fa4fa7e-0742-46ba-89ef-822ece56bdfd" />
+  <br>
+  <sub><i>Fig 16: Unknown Last 2 Columns</i></sub>
+</div>
 <br>
 14  buttons were unknown with 2 buttons for ON and OFF , 5 buttons of 4th column for brightness and last 2 buttons of 7th row as Set and Manual. <br>
 
@@ -247,7 +250,13 @@ So if row 1 and row 2 had 18 and 19 respectively I tried 0x20 then 0x21, using t
 To find other button values I had to dive deeper into understanding how hex value is represented. I realized 0x10 does not follow after 0x9 as 0x10 is (16^0*0)+(16^1*1)=17. 0xA comes after it.This way I found value of 4th row as well. For ON and OFF button I had to do some hit and trial by using long arrays of random command values and ultimately found them to be 0x1E and 0x1F.
 
 ### Integrating Remote
-<img width="700" height="1241" alt="final setup (1)" src="https://github.com/user-attachments/assets/7106f694-30f3-498c-9c8d-a10da626d956" />
+<div align="center">
+<img width="500" height="1041" alt="final setup (1)" src="https://github.com/user-attachments/assets/7106f694-30f3-498c-9c8d-a10da626d956" />
+  <br>
+  <sub><i>Fig 17:Final Setup</i></sub>
+</div>
+<br>
+
 For remote I used 4x4 keypad membrane (16 buttons), with help of keypad library by Mark Stanley.It makes use of array written in char data type which stores the value of buttons.
 Instead of writing multiple if else statments to define each button press,comparing it to my array of commands and then transmitting it, I made use of known concept that is values stored in charare put under quotations then output is stored in it's corresponding ASCII value and if stored in integer or hex format then output stored in corresponding BYTE form ((0 to 255 integers).For eg storing 0X1F will be stored as 31 & 20 as 20 but 'A' will be stored as 65. So directly mapped the keypad button array to desired command values and converted the output to HEX value during transmission. 
 
