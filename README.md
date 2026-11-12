@@ -2,7 +2,11 @@
 Had an old RGB lamp with included IR remote which was broken. So made a custom one using Arduino UNO. <br>
 
 ## About Remote
-Did continuity test on remote's PCB and found no error. Since 2 columns were non-operational. Concluded that the COB (chip on board) was either broken or just not programmed for the 2 columns. In my other repository I have reverse engineered the schematic and drawn a crude PCB design on KiCad. (https://github.com/Nayan9ine/RGB-light-Controller-Remote-) 
+<div align= "center"><img width="500" height="600" alt="Remote" src="https://github.com/user-attachments/assets/8f59da38-53c5-4d6a-9732-f8fa576a7664" />
+  <br><sub><i>Fig1: Faulty Remote</i></sub>
+</div>
+<br>
+Did continuity test on remote's PCB and found no error. Rightmost 2 columns were non-operational. Concluded that the COB (chip on board) was either broken or just not programmed for the 2 columns. In my other repository I have reverse engineered the schematic and drawn a crude PCB design on KiCad. (https://github.com/Nayan9ine/RGB-light-Controller-Remote-) 
 
 ## Project Details
 
@@ -22,7 +26,7 @@ Did continuity test on remote's PCB and found no error. Since 2 columns were non
   </tr>
 </table>
 
-Only the 1st two columns on remote worked so I needed to find their codes to guess the non-working ones. For that I needed a receiver.
+1st two columns of remote worked so I needed to find their codes to guess the non-working ones. For that I needed a receiver.
 Had an old TV setup box and remote with IR reciever and transmitter respectively. De-soldered them and used reciever to find the codes.
 
 Used Arduino-IRremote Library's (https://github.com/Arduino-IRremote/Arduino-IRremote) simple receiver example to detect the signals. Baud rate set at 152000 in order to catch high frequency signal. Observed that NEC protocol was followed, 0x00 address was universal for all the buttons and commands were unique. 
@@ -105,15 +109,15 @@ Protocol=NEC Address=0x0, Command=0x11, Repeat, Gap=39600us, Duration=11750us
 <sub>Repeat received. Here you can repeat the same action as before.
 
 ### IR Transmitter
-Using the IR transmitter example from the library, I created a program fed with a list of working commands that were signalled continously in a loop with a gap of about 3 seconds. Repeat signal set to 3 as its the standard.
+Using the IR transmitter example from the library, I created a program fed with a list of working commands that were signalled continously in a loop with a delay of about 3 seconds. Repeat signal set to 3 as its the standard.
 <table>
   <tr>
      <td>
-      <img width="2111" height="4838" alt="remote pcb" src="https://github.com/user-attachments/assets/3df83fdf-dac9-48b8-b3f3-f5b4ad92f30c" />
+      <img width="1800" height="3000" alt="remote pcb" src="https://github.com/user-attachments/assets/3df83fdf-dac9-48b8-b3f3-f5b4ad92f30c" />
       <div align="center"><sub><i>Fig 4: Spare TV Remote</i></sub></div>
     </td>
      <td>
-      <img width="2211" height="5133" alt="tx desolder" src="https://github.com/user-attachments/assets/6cac7685-0fed-4324-89c4-83375584e557" />
+      <img width="1800" height="3000" alt="tx desolder" src="https://github.com/user-attachments/assets/6cac7685-0fed-4324-89c4-83375584e557" />
       <div align="center"><sub><i>Fig 5: Transmitter on Remote</i></sub></div>
     </td>
   </tr>
