@@ -113,12 +113,14 @@ Using the IR transmitter example from the library, I created a program fed with 
 <table>
   <tr>
      <td>
+       <div align="center">
       <img width="250" height="461" alt="remote pcb" src="https://github.com/user-attachments/assets/2bee48fc-49f4-4600-a5c5-d66d661ed09d" />
-      <div align="center"><sub><i>Fig 5: Spare TV Remote</i></sub></div>
+      <div align="center"><sub><i>Fig 5: Spare TV Remote</i></sub></div></div>
     </td>
      <td>
+     <div align="center">
       <img width="250" height="461" alt="tx desolder" src="https://github.com/user-attachments/assets/339f1df4-bc81-44b1-8229-c48becf2d869" />
-      <div align="center"><sub><i>Fig 6: Transmitter on Remote</i></sub></div>
+      <div align="center"><sub><i>Fig 6: Transmitter on Remote</i></sub></div></div>
     </td>
   </tr>
   <tr>
@@ -190,31 +192,7 @@ Got Rb=8.6K Ohm $((5 \times 1\text{k}) + (470 \times 6)
 )$ , reduced Rc to 66 ohm.
 <br>
 Result: Still IR strength was very weak but the range was improved.
-<div align ="center">
- 
-  <table>
-  <tr>
-    <td><b>Rb Value (in KOhm)</b></td>
-    <td><b>Range (inch)</b></td>
-     <td><b>White Color Interference</b></td>
-  </tr>
-  <tr>
-    <td>7.2</td>
-    <td>53</td>
-     <td>Yes</td>
-  </tr>
-  <tr>
-    <td>6.7</td>
-    <td>67</td>
-     <td>Yes</td>
-  </tr>
-  <tr>
-    <td>6.3</td>
-    <td>78</td>
-     <td>IR resumed working when lamp was at 60 inch</td>
-  </tr>
-</table>
-</div>
+
   
 <table>
   <tr>
@@ -243,6 +221,41 @@ Used in Saturation mode so that channel will be opened fully and max current be 
 #### Calculation
 Forced Gain=20; Ic=70mA; Ib=3.5mA; Rb=1.228 kOhm; Vir=1.5v; Rc=47 Ohm.
 Result: Range increased to 80 inches with it still working after white lighting.
+<div align ="center">
+ 
+  <table>
+  <tr>
+    <td><b>Rb Value (in KOhm)</b></td>
+    <td><b>Range (inch)</b></td>
+     <td><b>White Color Interferening With IR</b></td>
+  </tr>
+  <tr>
+    <td>7.2</td>
+    <td>53</td>
+     <td>Yes</td>
+  </tr>
+  <tr>
+    <td>6.7</td>
+    <td>60</td>
+     <td>Yes</td>
+  </tr>
+  <tr>
+    <td>6.3</td>
+    <td>67</td>
+     <td>IR resumed working when lamp was at 60 inch</td>
+  </tr>
+    <tr>
+    <td>3.07</td>
+    <td>76</td>
+     <td>No</td>
+  </tr>
+    <tr>
+    <td>1.228</td>
+    <td>85</td>
+     <td>No</td>
+  </tr>
+</table>
+</div>
 
 ### Getting Unknown Remote Codes
 <div align="center">
@@ -253,11 +266,11 @@ Result: Range increased to 80 inches with it still working after white lighting.
 <br>
 14  buttons were unknown with 2 buttons for ON and OFF , 5 buttons of 4th column for brightness and last 2 buttons of 7th row as Set and Manual.From the known commands I noticed a pattern that showed increasing hex value along the row. So if row 1 and row 2 had 18 and 19 respectively I tried 0x20 then 0x21, using this I found only rows 3,5,6 and 7th worked. In which I had to independently test The brightness, manual and set buttons by writing separate programs.
 <br>
-To find other button values I had to dive deeper into understanding how hex value is represented. I realized 0x10 does not follow after 0x9 as 0x10 is (16^0*0)+(16^1*1)=17. 0xA comes after it.This way I found value of 4th row as well. For ON and OFF button I had to do some hit and trial by using long arrays of random command values and ultimately found them to be 0x1E and 0x1F.
+To find other button values I had to dive deeper into understanding how hex value is represented. I realized 0x10 does not follow after 0x9 as 0x10 is $$(16^{0} \times 0) + (16^{1} \times 1) = 17$$ .0xA comes after it.This way I found value of 4th row as well. For ON and OFF button I had to do some hit and trial by using long arrays of random command values and ultimately found them to be 0x1E and 0x1F.
 
 ### Integrating Remote
 <div align="center">
-<img width="500" height="1041" alt="final setup (1)" src="https://github.com/user-attachments/assets/7106f694-30f3-498c-9c8d-a10da626d956" />
+<img width="1241" height="700" alt="final setup (1)" src="https://github.com/user-attachments/assets/7b2f3772-23fd-4467-933b-bf9e5778cfce" />
   <br>
   <sub><i>Fig 17:Final Setup</i></sub>
 </div>
