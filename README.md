@@ -2,7 +2,7 @@
 Had an old RGB lamp with included IR remote which was broken. So made a custom one using Arduino UNO. <br>
 
 ## About Remote
-<div align= "center"><img width="400" height="662" alt="Remote" src="https://github.com/user-attachments/assets/3c5ed012-334e-4a94-9eb9-72ebe3e05022" />
+<div align= "center"><img width="200" height="370" alt="Remote" src="https://github.com/user-attachments/assets/3c5ed012-334e-4a94-9eb9-72ebe3e05022" />
 
   <br><sub><i>Fig1: Faulty Remote</i></sub>
 </div>
@@ -220,7 +220,7 @@ Result: Still IR strength was very weak but the range was improved.
       <div align="center"><sub><i>Fig:12 BJT with 17.17kOhm</i></sub></div>
     </td>
     <td>
-      <img width="3740" height="2827" alt="strong ir signal (1 2kohm)" src="https://github.com/user-attachments/assets/715e5f48-9e4b-4b22-b245-baf69ba7253b" />
+      <img width="500" height="378" alt="strong ir signal (1 2kohm)" src="https://github.com/user-attachments/assets/4f25b13f-4556-445c-b469-79df3199e8d1" />
       <div align="center"><sub><i>Fig:13 Strong IR signal Rb as (1 2kohm)</i></sub></div>
     </td>
     <td>
@@ -238,21 +238,18 @@ Forced Gain=20; Ic=70mA; Ib=3.5mA; Rb=1.228 kOhm; Vir=1.5v; Rc=47 Ohm.
 Result: Range increased to 80 inches with it still working after white lighting.
 
 ### Getting Unknown Remote Codes
-14  buttons were unknown with 2 buttons for ON and OFF , 5 buttons of 4th column for brightness and last 2 buttons of 7th row as Set and Manual. 
-<img width="500" height="906" alt="unknown buttons" src="https://github.com/user-attachments/assets/3fa4fa7e-0742-46ba-89ef-822ece56bdfd" />
-
-
+<img width="200" height="306" alt="unknown buttons" src="https://github.com/user-attachments/assets/3fa4fa7e-0742-46ba-89ef-822ece56bdfd" />
+<br>
+14  buttons were unknown with 2 buttons for ON and OFF , 5 buttons of 4th column for brightness and last 2 buttons of 7th row as Set and Manual. <br>
 
 From the known commands I noticed a pattern that showed increasing hex value along the row. 
-So if row 1 and row 2 had 18 and 19 respectively I tried 0x20 then 0x21, using this I found only rows 3,5,6 and 7th worked. In which I had to to independently test The brightness, manual and set buttons by writing separate programs.
-
-To find other button values I had to dive deeper into understanding how hex value is represented. 
-I realized 0x10 does not follow after 0x9 as 0x10 is (16^0*0)+(16^1*1)=17. 0xA comes after it.
-This way I found value of 4th row as well. For ON and OFF button I had to do some hit and trial by using long arrays of random command values and ultimately found them to be 0x1E and 0x1F.
+So if row 1 and row 2 had 18 and 19 respectively I tried 0x20 then 0x21, using this I found only rows 3,5,6 and 7th worked. In which I had to independently test The brightness, manual and set buttons by writing separate programs.<br>
+To find other button values I had to dive deeper into understanding how hex value is represented. I realized 0x10 does not follow after 0x9 as 0x10 is (16^0*0)+(16^1*1)=17. 0xA comes after it.This way I found value of 4th row as well. For ON and OFF button I had to do some hit and trial by using long arrays of random command values and ultimately found them to be 0x1E and 0x1F.
 
 ### Integrating Remote
+<img width="700" height="1241" alt="final setup (1)" src="https://github.com/user-attachments/assets/7106f694-30f3-498c-9c8d-a10da626d956" />
 For remote I used 4x4 keypad membrane (16 buttons), with help of keypad library by Mark Stanley.It makes use of array written in char data type which stores the value of buttons.
 Instead of writing multiple if else statments to define each button press,comparing it to my array of commands and then transmitting it, I made use of known concept that is values stored in charare put under quotations then output is stored in it's corresponding ASCII value and if stored in integer or hex format then output stored in corresponding BYTE form ((0 to 255 integers).For eg storing 0X1F will be stored as 31 & 20 as 20 but 'A' will be stored as 65. So directly mapped the keypad button array to desired command values and converted the output to HEX value during transmission. 
 
-<img width="700" height="1241" alt="final setup (1)" src="https://github.com/user-attachments/assets/7106f694-30f3-498c-9c8d-a10da626d956" />
+
 
