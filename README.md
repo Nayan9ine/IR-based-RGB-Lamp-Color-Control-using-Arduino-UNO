@@ -15,14 +15,14 @@ Did continuity test on remote's PCB and found no error. Rightmost 2 columns were
 <table>
   <tr>
     <td>
-      <img width="5760" height="4312" alt="soldering setup" src="https://github.com/user-attachments/assets/0a47111b-9699-4a80-b572-90bc97f1c617" />
+      <img width="1000" height="749" alt="soldering setup" src="https://github.com/user-attachments/assets/8bcb7cdd-7ce0-49c0-b2d4-c5c2d43d8809" />
       <div align="center"><sub><i>Fig:1 Solder Setup</i></sub></div>
     </td>
-    <td><img width="3376" height="4815" alt="ir receiver" src="https://github.com/user-attachments/assets/cf44afc7-de83-464c-8c4e-0272cd426c1e" />
+    <td><img width="800" height="1141" alt="ir receiver" src="https://github.com/user-attachments/assets/8c59f3bb-86bb-4fc7-aefa-f98bed870ade" />
       <div align="center"><sub><i>Fig:2 IR Receiver</i></sub></div>
     </td>
-    <td><img width="1920" height="1080" alt="IR received commands" src="https://github.com/user-attachments/assets/99df7a3f-b5aa-402e-92dd-8b1651007abc" />
-      <div align="center"><sub><i>Fig:3 IR Receiver Program</i></sub></div>
+    <td><img width="1000" height="563" alt="IR received commands" src="https://github.com/user-attachments/assets/f2b7aeab-36ba-475e-91ca-4003cf776db5" />
+    <div align="center"><sub><i>Fig:3 IR Receiver Program</i></sub></div>
     </td>
   </tr>
 </table>
