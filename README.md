@@ -29,76 +29,76 @@ Used Arduino-IRremote Library's (https://github.com/Arduino-IRremote/Arduino-IRr
 
 IDE O/P of 1st Two Columns:<br>
 
-<sub>Protocol=NEC Address=0x0, Command=0x18, Raw-Data=0xE718FF00, 32 bits, LSB first, Gap=3276750us, Duration=67550us
+<sub>Protocol=NEC Address=0x0, Command=0x18, Raw-Data=0xE718FF00, 32 bits, LSB first, Gap=3276750us, Duration=67550us<br>
 Send with: IrSender.sendNEC(0x0, 0x18, <numberOfRepeats>);
 
 <sub>Protocol=NEC Address=0x0, Command=0x18, Repeat, Gap=39600us, Duration=11700us
 
 <sub>Repeat received. Here you can repeat the same action as before.
-Protocol=NEC Address=0x0, Command=0x4, Raw-Data=0xFB04FF00, 32 bits, LSB first, Gap=3257100us, Duration=67500us
-Send with: IrSender.sendNEC(0x0, 0x4, <numberOfRepeats>);
+<br>Protocol=NEC Address=0x0, Command=0x4, Raw-Data=0xFB04FF00, 32 bits, LSB first, Gap=3257100us, Duration=67500us
+<br>Send with: IrSender.sendNEC(0x0, 0x4, <numberOfRepeats>);
 
 <sub>Protocol=NEC Address=0x0, Command=0x4, Repeat, Gap=39600us, Duration=11800us
 
 <sub>Repeat received. Here you can repeat the same action as before.
-Protocol=NEC Address=0x0, Command=0x8, Raw-Data=0xF708FF00, 32 bits, LSB first, Gap=1972400us, Duration=67550us
-Send with: IrSender.sendNEC(0x0, 0x8, <numberOfRepeats>);
+<br>Protocol=NEC Address=0x0, Command=0x8, Raw-Data=0xF708FF00, 32 bits, LSB first, Gap=1972400us, Duration=67550us
+<br>Send with: IrSender.sendNEC(0x0, 0x8, <numberOfRepeats>);
 
 <sub>Protocol=NEC Address=0x0, Command=0x8, Repeat, Gap=39600us, Duration=11700us
 
 <sub>Repeat received. Here you can repeat the same action as before.
-Protocol=NEC Address=0x0, Command=0xC, Raw-Data=0xF30CFF00, 32 bits, LSB first, Gap=1527200us, Duration=67550us
-Send with: IrSender.sendNEC(0x0, 0xC, <numberOfRepeats>);
+<br>Protocol=NEC Address=0x0, Command=0xC, Raw-Data=0xF30CFF00, 32 bits, LSB first, Gap=1527200us, Duration=67550us
+<br>Send with: IrSender.sendNEC(0x0, 0xC, <numberOfRepeats>);
 
 <sub>Protocol=NEC Address=0x0, Command=0xC, Repeat, Gap=39600us, Duration=11750us
 
 <sub>Repeat received. Here you can repeat the same action as before.
-Protocol=NEC Address=0x0, Command=0x10, Raw-Data=0xEF10FF00, 32 bits, LSB first, Gap=2146300us, Duration=67550us
-Send with: IrSender.sendNEC(0x0, 0x10, <numberOfRepeats>);
+<br>Protocol=NEC Address=0x0, Command=0x10, Raw-Data=0xEF10FF00, 32 bits, LSB first, Gap=2146300us, Duration=67550us
+<br>Send with: IrSender.sendNEC(0x0, 0x10, <numberOfRepeats>);
 
 <sub>Received command 0x10.
 Protocol=NEC Address=0x0, Command=0x10, Repeat, Gap=39600us, Duration=11750us
 
 <sub>Repeat received. Here you can repeat the same action as before.
-Protocol=NEC Address=0x0, Command=0x14, Raw-Data=0xEB14FF00, 32 bits, LSB first, Gap=2975450us, Duration=67600us
-Send with: IrSender.sendNEC(0x0, 0x14, <numberOfRepeats>);
+<br>Protocol=NEC Address=0x0, Command=0x14, Raw-Data=0xEB14FF00, 32 bits, LSB first, Gap=2975450us, Duration=67600us
+<br>Send with: IrSender.sendNEC(0x0, 0x14, <numberOfRepeats>);
 
 <sub>Protocol=NEC Address=0x0, Command=0x14, Repeat, Gap=39550us, Duration=11700us
 
 <sub>Repeat received. Here you can repeat the same action as before.
-Protocol=NEC Address=0x0, Command=0x19, Raw-Data=0xE619FF00, 32 bits, LSB first, Gap=3276750us, Duration=67550us
-Send with: IrSender.sendNEC(0x0, 0x19, <numberOfRepeats>);
+<br>Protocol=NEC Address=0x0, Command=0x19, Raw-Data=0xE619FF00, 32 bits, LSB first, Gap=3276750us, Duration=67550us
+<br>Send with: IrSender.sendNEC(0x0, 0x19, <numberOfRepeats>);
 
 <sub>Protocol=NEC Address=0x0, Command=0x19, Repeat, Gap=39600us, Duration=11750us
 
 <sub>Repeat received. Here you can repeat the same action as before.
-Protocol=NEC Address=0x0, Command=0x5, Raw-Data=0xFA05FF00, 32 bits, LSB first, Gap=1627600us, Duration=67500us
-Send with: IrSender.sendNEC(0x0, 0x5, <numberOfRepeats>);
+<br>Protocol=NEC Address=0x0, Command=0x5, Raw-Data=0xFA05FF00, 32 bits, LSB first, Gap=1627600us, Duration=67500us
+<br>Send with: IrSender.sendNEC(0x0, 0x5, <numberOfRepeats>);
 
 <sub>Protocol=NEC Address=0x0, Command=0x5, Repeat, Gap=39600us, Duration=11750us
 
 <sub>Repeat received. Here you can repeat the same action as before.
-Protocol=NEC Address=0x0, Command=0x9, Raw-Data=0xF609FF00, 32 bits, LSB first, Gap=1352050us, Duration=67550us
-Send with: IrSender.sendNEC(0x0, 0x9, <numberOfRepeats>);
+<br>Protocol=NEC Address=0x0, Command=0x9, Raw-Data=0xF609FF00, 32 bits, LSB first, Gap=1352050us, Duration=67550us
+<br>Send with: IrSender.sendNEC(0x0, 0x9, <numberOfRepeats>);
 
 <sub>Protocol=NEC Address=0x0, Command=0x9, Repeat, Gap=39600us, Duration=11750us
 
 <sub>Repeat received. Here you can repeat the same action as before.
-Protocol=NEC Address=0x0, Command=0xD, Raw-Data=0xF20DFF00, 32 bits, LSB first, Gap=2357200us, Duration=67550us
-Send with: IrSender.sendNEC(0x0, 0xD, <numberOfRepeats>);
+<br>Protocol=NEC Address=0x0, Command=0xD, Raw-Data=0xF20DFF00, 32 bits, LSB first, Gap=2357200us, Duration=67550us
+<br>Send with: IrSender.sendNEC(0x0, 0xD, <numberOfRepeats>);
 
 <sub>Protocol=NEC Address=0x0, Command=0xD, Repeat, Gap=39600us, Duration=11750us
 
 <sub>Repeat received. Here you can repeat the same action as before.
-Protocol=NEC Address=0x0, Command=0x11, Raw-Data=0xEE11FF00, 32 bits, LSB first, Gap=3035050us, Duration=67550us
-Send with: IrSender.sendNEC(0x0, 0x11, <numberOfRepeats>);
+<br>Protocol=NEC Address=0x0, Command=0x11, Raw-Data=0xEE11FF00, 32 bits, LSB first, Gap=3035050us, Duration=67550us
+<br>Send with: IrSender.sendNEC(0x0, 0x11, <numberOfRepeats>);
 
 <sub>Received command 0x11.
 Protocol=NEC Address=0x0, Command=0x11, Repeat, Gap=39600us, Duration=11750us
 
 <sub>Repeat received. Here you can repeat the same action as before.
-Protocol=NEC Address=0x0, Command=0x15, Raw-Data=0xEA15FF00, 32 bits, LSB first, Gap=3276750us, Duration=67500us
-Send with: IrSender.sendNEC(0x0, 0x15, <numberOfRepeats>);
+<br>Protocol=NEC Address=0x0, Command=0x15, Raw-Data=0xEA15FF00, 32 bits, LSB first, Gap=3276750us, Duration=67500us
+<br>Send with: IrSender.sendNEC(0x0, 0x15, <numberOfRepeats>);
 
 <sub>Protocol=NEC Address=0x0, Command=0x15, Repeat, Gap=39600us, Duration=11750us
 
@@ -172,23 +172,19 @@ Realized 20mA isnt enough and need about 50mA atleast so:
 <br>
 Utilized BC547 B with absoulte maximum Ic=100mA and electrical characteristics were: Vce= 90-200mV (sat); Vbe= 700-900 mV (sat),660 mV (ON); Gain (Ic/Ib) = 200-450 for B class. (https://cdn.sparkfun.com/assets/d/5/e/5/d/BC547.pdf)
 
-##### Calculation:
+#### Calculation:
 With Ic assumed=50mA, gain=200, Vbe=0.7V, Vce=0.2mV
 I got Rc=72 Ohm and Rb=18k Ohm ( four 67K in parallel and 1k in series = 17970 Ohm)
-<img width="4588" height="4070" alt="bjt 17k base ohm" src="https://github.com/user-attachments/assets/e667d629-3a53-4e46-9c12-47d42b12bb52" />
+
 <br>
 Result: Worked but resulting IR signals were very weak.Didn't work after a short distance 
 (https://drive.google.com/file/d/1yKxyMbIhAzy9gKmQ9HroFnUobWQBn7yZ/view?usp=sharing)
 
 Due to low tolerance to temperature the bjt can have highly fluctuating gain so I assumed the gain of this particular BJT was very low so I redid the calculations taking gain =100.
-Got Rb=8.6K Ohm ((5x1k)+(470x6)), reduced Rc to 66 ohm.
+Got Rb=8.6K Ohm $((5 \times 1\text{k}) + (470 \times 6)
+)$ , reduced Rc to 66 ohm.
 <br>
 Result: Still IR strength was very weak but the range was improved.
-
-insert table here IR STRENGTH CHART
-Rb= 7.2kOhm distance of working=53inch  Doesnt switch after white
-6.79kOhm                     93 inch     nothing after white
-6.3k                      white works at 60 inch
 <table>
   <tr>
     <td><b>Rb Value (in KOhm)</b></td>
@@ -208,12 +204,30 @@ Rb= 7.2kOhm distance of working=53inch  Doesnt switch after white
   <tr>
     <td>6.3</td>
     <td>78</td>
-     <td>IR resumed work when lamp was at 60 inch</td>
+     <td>IR resumed working when lamp was at 60 inch</td>
   </tr>
 </table>
 
-Rb=4k; Ib=1.075mA; Ic=107.5mA Brightness increased but still not strong enough
+<table>
+  <tr>
+    <td>
+      <img width="4588" height="4070" alt="bjt 17k base ohm" src="https://github.com/user-attachments/assets/e667d629-3a53-4e46-9c12-47d42b12bb52" />
+      <div align="center"><sub><i>Fig:12 BJT with 17.17kOhm</i></sub></div>
+    </td>
+    <td>
+      <img width="3740" height="2827" alt="strong ir signal (1 2kohm)" src="https://github.com/user-attachments/assets/715e5f48-9e4b-4b22-b245-baf69ba7253b" />
+      <div align="center"><sub><i>Fig:13 Strong IR signal Rb as (1 2kohm)</i></sub></div>
+    </td>
+    <td>
+      <img width="4434" height="2834" alt="Rb as 1 47 kohm" src="https://github.com/user-attachments/assets/c059b945-1f38-40eb-95b0-a8af72a84a4d" />
+      <div align="center"><sub><i>Fig:14 IR Receiver Rb as 1.47 kohm/i></sub></div>
+    </td>
+  </tr>
+</table>
+Rb=4k; Ib=1.075mA; Ic=107.5mA Brightness increased but still not strong enough<br><br>
 Used in Saturation mode so that channel will be opened fully and max current be pushed through collector.
+
+
 ##### Calculation
 Forced Gain=20; Ic=70mA; Ib=3.5mA; Rb=1.228 kOhm; Vir=1.5v; Rc=47 Ohm.
 Result: Range increased to 80 inches with it still working after white lighting.
@@ -221,6 +235,7 @@ Result: Range increased to 80 inches with it still working after white lighting.
 ### Getting Unknown Remote Codes
 14  buttons were unknown with 2 buttons for ON and OFF , 5 buttons of 4th column for brightness and last 2 buttons of 7th row as Set and Manual. 
 <img width="1278" height="2315" alt="unknown buttons" src="https://github.com/user-attachments/assets/12e03dd5-da35-413d-a570-1fa715b8d92d" />
+
 
 From the known commands I noticed a pattern that showed increasing hex value along the row. 
 So if row 1 and row 2 had 18 and 19 respectively I tried 0x20 then 0x21, using this I found only rows 3,5,6 and 7th worked. In which I had to to independently test The brightness, manual and set buttons by writing separate programs.
