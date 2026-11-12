@@ -266,7 +266,7 @@ Result: Range increased to 80 inches with it still working after white lighting.
 <br>
 14  buttons were unknown with 2 buttons for ON and OFF , 5 buttons of 4th column for brightness and last 2 buttons of 7th row as Set and Manual.From the known commands I noticed a pattern that showed increasing hex value along the row. So if row 1 and row 2 had 18 and 19 respectively I tried 0x20 then 0x21, using this I found only rows 3,5,6 and 7th worked. In which I had to independently test The brightness, manual and set buttons by writing separate programs.
 <br>
-To find other button values I had to dive deeper into understanding how hex value is represented. I realized 0x10 does not follow after 0x9 as 0x10 is $$(16^{0} \times 0) + (16^{1} \times 1) = 17$$ .0xA comes after it.This way I found value of 4th row as well. For ON and OFF button I had to do some hit and trial by using long arrays of random command values and ultimately found them to be 0x1E and 0x1F.
+To find other button values I had to dive deeper into understanding how hex value is represented. I realized 0x10 does not follow after 0x9 as 0x10 is $((16^{0} \times 0) + (16^{1} \times 1) = 17)$ .0xA comes after it.This way I found value of 4th row as well. For ON and OFF button I had to do some hit and trial by using long arrays of random command values and ultimately found them to be 0x1E and 0x1F.
 
 ### Integrating Remote
 <div align="center">
