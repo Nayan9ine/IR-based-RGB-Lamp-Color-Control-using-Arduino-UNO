@@ -114,21 +114,21 @@ Using the IR transmitter example from the library, I created a program fed with 
 <table>
   <tr>
      <td>
-      <img width="1800" height="3000" alt="remote pcb" src="https://github.com/user-attachments/assets/3df83fdf-dac9-48b8-b3f3-f5b4ad92f30c" />
+      <img width="500" height="1146" alt="remote pcb" src="https://github.com/user-attachments/assets/2bee48fc-49f4-4600-a5c5-d66d661ed09d" />
       <div align="center"><sub><i>Fig 4: Spare TV Remote</i></sub></div>
     </td>
      <td>
-      <img width="1800" height="3000" alt="tx desolder" src="https://github.com/user-attachments/assets/6cac7685-0fed-4324-89c4-83375584e557" />
+      <img width="500" height="1161" alt="tx desolder" src="https://github.com/user-attachments/assets/339f1df4-bc81-44b1-8229-c48becf2d869" />
       <div align="center"><sub><i>Fig 5: Transmitter on Remote</i></sub></div>
     </td>
   </tr>
   <tr>
      <td>
-      <img width="3681" height="3488" alt="desoldered TX" src="https://github.com/user-attachments/assets/592ad72a-13dc-41ad-a3cb-e86db0369ad3" />
+      <img width="500" height="474" alt="desoldered TX" src="https://github.com/user-attachments/assets/a083f132-1fe0-473b-bb70-5f162c9a00da" />
       <div align="center"><sub><i>Fig 6: De-soldered IR Tx</i></sub></div>
     </td>
     <td>
-      <img width="1920" height="1080" alt="transmitter code" src="https://github.com/user-attachments/assets/74675a8d-6ad4-4ec7-ad89-6962d4a881bb" />
+      <img width="1000" height="563" alt="transmitter code" src="https://github.com/user-attachments/assets/e9234bd5-2cf6-4a53-94c8-6a1f52b88a94" />
       <div align="center"><sub><i>Fig 7: IR Tx Program </i></sub></div>
     </td>
   </tr>
@@ -138,20 +138,20 @@ Using the IR transmitter example from the library, I created a program fed with 
 <table>
   <tr>
     <td>
-      <img width="2579" height="1148" alt="IR via Camera" src="https://github.com/user-attachments/assets/b6da534d-f886-47c3-903a-663ebee080c6" />
+      <img width="800" height="356" alt="IR via Camera" src="https://github.com/user-attachments/assets/4d7bb0ed-db9a-4b7a-917f-618efeac955c" />
       <div align="center"><sub><i>Fig:8 IR Flash from camera</i></sub></div>
     </td>
     <td>
-      <img width="4895" height="2638" alt="tx with resistor" src="https://github.com/user-attachments/assets/1d995e3a-f53a-4952-b65e-7ffad1779b9b" />
+     <img width="500" height="269" alt="tx with resistor" src="https://github.com/user-attachments/assets/080072e5-b09b-470e-840f-59278dd58e1e" />
       <div align="center"><sub><i>Fig:9 220 Ohm</i></sub></div>
     </td>
   </tr>
   <tr>
-    <td><img width="4420" height="2519" alt="tx with pot" src="https://github.com/user-attachments/assets/25d1faa2-f607-405d-89f0-bd991f148cee" />
+    <td><img width="500" height="285" alt="tx with pot" src="https://github.com/user-attachments/assets/2a181226-b465-40de-a9c3-5e28be4853ca" />
       <div align="center"><sub><i>Fig:10 Potentiometer</i></sub></div>
     </td>
     <td>
-     <img width="3293" height="3867" alt="Ir tx pot ohm" src="https://github.com/user-attachments/assets/610957f6-c60c-4050-b577-d106adcf437b" />
+     <img width="500" height="587" alt="Ir tx pot ohm" src="https://github.com/user-attachments/assets/6c6aa93e-3163-47aa-8b75-82b253760ada" />
       <div align="center"><sub><i>Fig:11 167 Ohm</i></sub></div>
     </td>
  </tr>
@@ -216,7 +216,7 @@ Result: Still IR strength was very weak but the range was improved.
 <table>
   <tr>
     <td>
-      <img width="4588" height="4070" alt="bjt 17k base ohm" src="https://github.com/user-attachments/assets/e667d629-3a53-4e46-9c12-47d42b12bb52" />
+      <img width="500" height="444" alt="bjt 17k base ohm" src="https://github.com/user-attachments/assets/51438a6b-8ec4-436f-9c9c-4e19e047d9b7" />
       <div align="center"><sub><i>Fig:12 BJT with 17.17kOhm</i></sub></div>
     </td>
     <td>
@@ -224,7 +224,7 @@ Result: Still IR strength was very weak but the range was improved.
       <div align="center"><sub><i>Fig:13 Strong IR signal Rb as (1 2kohm)</i></sub></div>
     </td>
     <td>
-      <img width="4434" height="2834" alt="Rb as 1 47 kohm" src="https://github.com/user-attachments/assets/c059b945-1f38-40eb-95b0-a8af72a84a4d" />
+     <img width="600" height="383" alt="Rb as 1 47 kohm" src="https://github.com/user-attachments/assets/eeb5a225-fdf7-4825-92d3-7ce4d76c28f9" />
       <div align="center"><sub><i>Fig:14 IR Receiver Rb as 1.47 kohm/i></sub></div>
     </td>
   </tr>
@@ -239,7 +239,8 @@ Result: Range increased to 80 inches with it still working after white lighting.
 
 ### Getting Unknown Remote Codes
 14  buttons were unknown with 2 buttons for ON and OFF , 5 buttons of 4th column for brightness and last 2 buttons of 7th row as Set and Manual. 
-<img width="1278" height="2315" alt="unknown buttons" src="https://github.com/user-attachments/assets/12e03dd5-da35-413d-a570-1fa715b8d92d" />
+<img width="500" height="906" alt="unknown buttons" src="https://github.com/user-attachments/assets/3fa4fa7e-0742-46ba-89ef-822ece56bdfd" />
+
 
 
 From the known commands I noticed a pattern that showed increasing hex value along the row. 
@@ -253,4 +254,5 @@ This way I found value of 4th row as well. For ON and OFF button I had to do som
 For remote I used 4x4 keypad membrane (16 buttons), with help of keypad library by Mark Stanley.It makes use of array written in char data type which stores the value of buttons.
 Instead of writing multiple if else statments to define each button press,comparing it to my array of commands and then transmitting it, I made use of known concept that is values stored in charare put under quotations then output is stored in it's corresponding ASCII value and if stored in integer or hex format then output stored in corresponding BYTE form ((0 to 255 integers).For eg storing 0X1F will be stored as 31 & 20 as 20 but 'A' will be stored as 65. So directly mapped the keypad button array to desired command values and converted the output to HEX value during transmission. 
 
-<img width="4312" height="5760" alt="final setup (1)" src="https://github.com/user-attachments/assets/8a9ff81a-6291-4f3a-99b5-bc3e8c7a583c" />
+<img width="700" height="1241" alt="final setup (1)" src="https://github.com/user-attachments/assets/7106f694-30f3-498c-9c8d-a10da626d956" />
+
