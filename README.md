@@ -2,7 +2,8 @@
 Had an old RGB lamp with included IR remote which was broken. So made a custom one using Arduino UNO. <br>
 
 ## About Remote
-<div align= "center"><img width="500" height="600" alt="Remote" src="https://github.com/user-attachments/assets/8f59da38-53c5-4d6a-9732-f8fa576a7664" />
+<div align= "center"><img width="400" height="662" alt="Remote" src="https://github.com/user-attachments/assets/3c5ed012-334e-4a94-9eb9-72ebe3e05022" />
+
   <br><sub><i>Fig1: Faulty Remote</i></sub>
 </div>
 <br>
