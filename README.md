@@ -3,7 +3,8 @@
 Had an old RGB lamp with included IR remote which was broken. So made a custom one using Arduino UNO. <br>
 
 ## About Remote
-<div align= "center"><img width="200" height="370" alt="Remote" src="https://github.com/user-attachments/assets/3c5ed012-334e-4a94-9eb9-72ebe3e05022" />
+<div align= "center"><img width="400" height="200" alt="Remote" src="https://github.com/user-attachments/assets/c475c69d-4055-4f9c-b03c-d4d46d195d99" />
+
 
   <br><sub><i>Fig 1 : Faulty Remote</i></sub>
 </div>
@@ -260,14 +261,15 @@ Result: Range increased to 80 inches with it still working after white lighting.
 
 ### Getting Unknown Remote Codes
 <div align="center">
-<img width="200" height="306" alt="unknown buttons" src="https://github.com/user-attachments/assets/3fa4fa7e-0742-46ba-89ef-822ece56bdfd" />
+<img width="428" height="260" alt="unknown buttons" src="https://github.com/user-attachments/assets/2fa5dff0-f293-4dae-8e09-bf65957d1278" />
+
   <br>
   <sub><i>Fig 16: Unknown Last 2 Columns</i></sub>
 </div>
 <br>
 14  buttons were unknown with 2 buttons for ON and OFF , 5 buttons of 4th column for brightness and last 2 buttons of 7th row as Set and Manual.From the known commands I noticed a pattern that showed increasing hex value along the row. So if row 1 and row 2 had 18 and 19 respectively I tried 0x20 then 0x21, using this I found only rows 3,5,6 and 7th worked. In which I had to independently test The brightness, manual and set buttons by writing separate programs.
 <br>
-To find other button values I had to dive deeper into understanding how hex value is represented. I realized 0x10 does not follow after 0x9 as 0x10 is 
+To find other button values I had to dive deeper into understanding how hex value is represented. I realized 0x10 does not follow after 0x9 as 0x10 is:
 
 $$
 (16^{0} \times 0) + (16^{1} \times 1) = 17
@@ -276,13 +278,17 @@ $$
 0xA comes after it.This way I found value of 4th row as well. For ON and OFF button I had to do some hit and trial by using long arrays of random command values and ultimately found them to be 0x1E and 0x1F.
 
 ### Integrating Remote
-<div align="center">
-<img width="1241" height="700" alt="final setup (1)" src="https://github.com/user-attachments/assets/7b2f3772-23fd-4467-933b-bf9e5778cfce" />
-  <br>
-  <sub><i>Fig 17:Final Setup</i></sub>
-</div>
-<br>
-<img width="400" height="371" alt="mapped keypad" src="https://github.com/user-attachments/assets/0092ed99-274d-4aa4-8f9b-fc98dd8b2708" />
+<table>
+  <tr>
+    <td>
+      <img width="400" height="371" alt="mapped keypad" src="https://github.com/user-attachments/assets/0092ed99-274d-4aa4-8f9b-fc98dd8b2708" />
+      <div align="center"><sub><i>Fig 17: Mapped Keypad</i></sub></div>
+    </td>
+    <td><img width="741" height="400" alt="final setup (1)" src="https://github.com/user-attachments/assets/7b2f3772-23fd-4467-933b-bf9e5778cfce" />
+      <div align="center"><sub><i>Fig 18: Final Setup</i></sub></div>
+    </td>
+  </tr>
+</table>
 
 For remote I used 4x4 keypad membrane (16 buttons), with help of keypad library by Mark Stanley.It makes use of array written in char data type which stores the value of buttons.Instead of writing multiple if else statments to define each button press,comparing it to my array of commands and then transmitting it, I made use of known concept that is values stored in charare put under quotations then output is stored in it's corresponding ASCII value and if stored in integer or hex format then output stored in corresponding BYTE form ((0 to 255 integers).
 <br>
