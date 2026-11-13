@@ -282,10 +282,12 @@ $$
   <sub><i>Fig 17:Final Setup</i></sub>
 </div>
 <br>
+<img width="400" height="371" alt="mapped keypad" src="https://github.com/user-attachments/assets/0092ed99-274d-4aa4-8f9b-fc98dd8b2708" />
 
 For remote I used 4x4 keypad membrane (16 buttons), with help of keypad library by Mark Stanley.It makes use of array written in char data type which stores the value of buttons.Instead of writing multiple if else statments to define each button press,comparing it to my array of commands and then transmitting it, I made use of known concept that is values stored in charare put under quotations then output is stored in it's corresponding ASCII value and if stored in integer or hex format then output stored in corresponding BYTE form ((0 to 255 integers).
 <br>
 For eg storing 0X1F will be stored as 31 & 20 as 20 but 'A' will be stored as 65. So directly mapped the keypad button array to desired command values and converted the output to HEX value during transmission. 
 
+Final Working Video Link: https://drive.google.com/file/d/1pHsi9MqW5scVjXhCKp5MoSrCclS7pR2l/view?usp=sharing
 
 
